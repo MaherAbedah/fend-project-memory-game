@@ -66,19 +66,29 @@ h1 {
 }
 
 .deck .card.open {
-    transform: rotateY(0);
+    transform: rotateY(180deg);
     background: #02b3e4;
     cursor: default;
+    font-size: 33px;
+    transition: 1s;
 }
 
-.deck .card.show {
-    font-size: 33px;
-}
+
 
 .deck .card.match {
     cursor: default;
     background: #02ccba;
     font-size: 33px;
+    transition: 2s;
+    delay: 0.5s;
+}
+
+.deck .card.not-matched {
+    cursor: default;
+    background: #C40D0C;
+    font-size: 33px;
+    
+    transition: 1s;
 }
 
 /*
@@ -96,6 +106,7 @@ h1 {
     padding: 0;
     display: inline-block;
     margin: 0 5px 0 0;
+    color: #DB2F
 }
 
 .score-panel .stars li {
@@ -106,4 +117,22 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+.no-win{
+    display: none;
+}
+.win{
+    margin-top: 200px;
+    text-align: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+#restartButton{
+    width: 200px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #3EBA11;
+    border-radius: 5px; 
 }
